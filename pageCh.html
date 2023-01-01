@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav{
+    background: #a0a9af;
+    height: 70px;
+    width: 100%;
+    flex-wrap: wrap;
+    
+  }
+nav ul{
+ padding-left: 10px;}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-decoration: none;
+}
+a.active,a:hover{
+    background: #a0a9af;
+    transform: .5s;
+}
+  
+  .title {
+      font-size: medium;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;   
+    }
+    .searchinput{
+      margin-bottom: 0.5cm;
+      
+    
+    }
+   
+    .btn-container {
+      margin-bottom: 4rem;
+      display: grid;
+      gap: 0.5cm;
+    
+    }
+    .filter-btn {
+      font-size: small;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      background: transparent;
+      border-style: hidden;
+      cursor: pointer;
+    }
+    .section-center {
+      width: 90vw;
+      margin: 0 auto;
+      max-width: 1170px;
+      display: grid;
+      gap: 2rem 2rem 2rem;
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-items: center;
+      row-gap: 1cm;
+    }
+    .coursephoto {
+      object-fit: cover;
+      height: 150px;
+      width: 8cm;
+      border-radius: 10px;
+    }
+    .coursename {
+      text-align: center;
+      color: gray;
+  
+    }
+   .price {
+      text-align: center;
+      color: black;
+      font-weight: 1000;
+    }
+   .menu{
+    margin-top: 2cm;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-items: center;
+   }
+    .active{
+  background-color: rgb(37, 37, 37);
+    color: #ffffff;
+    }
+    .hide{
+      display: none;
+    }
+    *{
+    margin: 0;
+    }
+    .leftpart{
+    margin-left: 3cm;
+    margin-right: 1cm;
+    }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+         <li> <a href="index2.html">Home</a></li>
+         <li> <a href="courses.html">Courses</a></li> 
+         <li>  <a href="#">About</a></li>
+       </ul>
+      </nav>
+      <section class="menu">
+       <div class="leftpart">
+         <div class="searchinput">
+           <input type="text" placeholder="Search" id="search">
+         </div>
+         
+         <!-- filter buttons -->
+         <div class="btn-container">
+           <div class="title">
+             Categories
+           </div>
+           <button type="button" class="filter-btn" data-id="all" onclick="filterProduct('ALL')">All</button> 
+           <button type="button" class="filter-btn" data-id="CSS" onclick="filterProduct('CSS')">CSS</button>
+           <button type="button" class="filter-btn" data-id="JS" onclick="filterProduct('JS')">JS</button>
+           <button type="button" class="filter-btn" data-id="HTML" onclick="filterProduct('HTML')">HTML</button> 
+           <button type="button" class="filter-btn" data-id="PHP" onclick="filterProduct('PHP')">PHP</button> 
+         </div>
+         <h4>Price</h4>
+         <form class="price-form">
+           <input
+           id="price"
+           step="0.1"
+             type="range"
+             class="price-filter"
+             min="0"
+             value="50"
+             max="100"
+           />
+         </form>
+         <p class="price-value">Value:<span id="priceValue"></span></p>
+       </div>
+       
+       <!-- menu items -->
+       <div class="section-center">
+         <!-- single item -->
+         <article class="menu-item">
+           <img src="" alt="menu item" class="coursephoto" />
+           <div class="item-info">
+             <header>
+               <h4 class="coursename"> </h4> 
+               <h4 class="price"> </h4> 
+             </header>
+            </div>
+         </article>
+         </div>
+     </section>
+     <script src="courses.js"></script>
+</body>
+</html>

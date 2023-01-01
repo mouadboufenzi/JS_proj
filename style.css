@@ -1,0 +1,42 @@
+.all{
+    width: 80%;
+    height: 85%;
+    margin: auto;
+}
+#msg1{
+    float: left;
+    justify-content: left;
+    margin-left: 10px;
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+#msg2{
+    float: left;
+    justify-content: left;
+    margin-left: 10px;
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+#msg3{
+    float: left;
+    justify-content: left;
+    margin-left: 10px;
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+#msg4{
+    float: left;
+    justify-content: left;
+    margin-left: 10px;
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+
+#f input{
+    border-bottom: 0.2px solid rgb(88, 87, 87);
+    border-radius: 0;
+}
